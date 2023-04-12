@@ -1,0 +1,12 @@
+CREATE TABLE hudpleieklinikk
+(id INTEGER PRIMARY KEY, item text, size_in_ml integer, purchace_price integer, sellout_price integer, bought_items integer, sold_items integer);
+
+INSERT INTO hudpleieklinikk values 
+(1, "cleanser", 150, 200, 500, 10, 3),
+(2, "serum", 30, 700, 1500, 7, 5),
+(3, "spf", 70, 300, 600, 15, 4),
+(4, "night_cream", 100, 500, 1400, 6, 6);
+
+SELECT * FROM hudpleieklinikk ORDER BY "sellout_price";
+
+SELECT sum ("sold_items") from hudpleieklinikk;
